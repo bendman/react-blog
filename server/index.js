@@ -12,8 +12,6 @@ var appRoutes = require('../client/src/routes.jsx').default;
 app.use(express.static('client/srv'));
 
 app.get('*', function (req, res) {
-    console.log('routes', appRoutes);
-    console.log('location', req.url);
     match({ routes: appRoutes, location: req.url }, (err, redirectLocation, renderProps) => {
         if (err) {
             res.status(500).send(error.message)

@@ -4,7 +4,7 @@
   "description": "A simple react blog",
   "main": "index.js",
   "scripts": {
-    "start": "$(npm bin)/nodemon --watch server --watch client/src --exec 'BABEL_ENV=node $(npm bin)/babel-node' ./server/index.js",
+    "start": "$(npm bin)/nodemon --watch server --watch client/src -e js,jsx,css,scss --exec 'BABEL_ENV=node $(npm bin)/babel-node' ./server/index.js",
     "webpack": "$(npm bin)/nodemon --watch client/src -e js,jsx,css,scss $(npm bin)/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
