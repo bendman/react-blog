@@ -29,6 +29,7 @@ app.get('*', function (req, res) {
                 <head>
                     <meta charset="UTF-8">
                     <title>Blog</title>
+                    <link rel="stylesheet" href="./styles.bundle.css" />
                 </head>
                 <body>
                     <div id="content">${reactContent}</div>

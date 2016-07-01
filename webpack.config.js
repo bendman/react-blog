@@ -1,4 +1,5 @@
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var exclusions = path.join(__dirname, 'node_modules');
 
@@ -25,10 +26,16 @@ var config = {
             },
             {
                 test: /\.s?css$/,
-                loaders: ['style', 'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]', 'postcss']
+                loader: ExtractTextPlugin.extract(
+                    'style',
+                    'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss'
+                )
             }
         ]
     },
+    plugins: [
+        new ExtractTextPlugin('styles.bundle.css')
+    ],
     postcss: function () {
         return [
             require('autoprefixer'), require('precss')
