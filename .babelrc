@@ -1,0 +1,16 @@
+{
+    "presets": ["es2015", "react"],
+    "env": {
+        "node": {
+            "plugins": [
+                [
+                    "css-modules-transform",
+                    {
+                        "extensions": [".css", ".scss"],
+                        "generateScopedName": "[path][name]---[local]---[hash:base64:5]",
+                    }
+                ]
+            ]
+        }
+    }
+}

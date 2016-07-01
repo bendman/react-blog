@@ -1,0 +1,51 @@
+{
+  "name": "react-blog",
+  "version": "1.0.0",
+  "description": "A simple react blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "$(npm bin)/nodemon --watch server --watch client/src --exec 'BABEL_ENV=node $(npm bin)/babel-node' ./server/index.js",
+    "webpack": "$(npm bin)/nodemon --watch client/src -e js,jsx,css,scss $(npm bin)/webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bendman/react-blog.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "blog",
+    "express"
+  ],
+  "author": "bendman <duncan.ben@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendman/react-blog/issues"
+  },
+  "homepage": "https://github.com/bendman/react-blog#readme",
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-plugin-css-modules-transform": "^0.1.1",
+    "express": "^4.14.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "nodemon": "^1.9.2",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}
