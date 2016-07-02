@@ -1,69 +1,69 @@
 @import url('../shared/variables.scss');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
 html {
-    background: $baseLight;
-    color: $baseDark;
-    padding: 0;
-    margin: 0;
+  background: $baseLight;
+  color: $baseDark;
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .header {
-    background: $baseBlue;
-    display: flex;
-    flex-grow: 0;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  background: $baseBlue;
+  display: flex;
+  flex-grow: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
 
     a {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+      margin: 0 1rem;
     }
-
-    ul {
-        list-style-type: none;
-    }
-    li {
-        display: inline-block;
-
-        a {
-            margin: 0 1rem;
-        }
-    }
+  }
 }
 
 .main_title {
-    margin: 0 1rem;
-    font-weight: 100;
-    font-family: helvetica, sans-serif;
+  margin: 0 1rem;
+  font-weight: 100;
+  font-family: helvetica, sans-serif;
 }
 
 .main {
-    background: $offLight;
-    display: flex;
-    flex-grow: 1;
-    width: 50%;
-    max-width: 40rem;
-    min-width: 20rem;
-    padding: 1rem;
+  background: $offLight;
+  display: flex;
+  flex-grow: 1;
+  width: 50%;
+  max-width: 40rem;
+  min-width: 20rem;
+  padding: 1rem;
 }

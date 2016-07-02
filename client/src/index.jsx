@@ -5,5 +5,5 @@ import { Router, browserHistory } from 'react-router';
 import appRoutes from './routes.jsx';
 
 render((
-    <Router history={browserHistory} routes={appRoutes} />
+  <Router history={browserHistory} routes={appRoutes} />
 ), document.getElementById('content'));

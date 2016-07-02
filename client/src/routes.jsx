@@ -7,10 +7,10 @@ import postList from './shared/post-list';
 
 
 export default createRoutes(
-    <Route path="/" component={PageWrapper}>
-        <IndexRoute component={HomePage} />
-        {postList.map((Post, i) => (
-            <Route key={i} path={`post${i}`} component={Post} />
-        ))}
-    </Route>
+  <Route path="/" component={PageWrapper}>
+    <IndexRoute component={HomePage} />
+    {postList.map((Post, i) => (
+      <Route key={i} path={`post${i}`} component={Post} />
+    ))}
+  </Route>
 );

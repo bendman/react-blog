@@ -6,6 +6,7 @@
   "scripts": {
     "start": "$(npm bin)/nodemon --watch server --watch client/src -e js,jsx,css,scss --exec 'BABEL_ENV=node $(npm bin)/babel-node' ./server/index.js",
     "webpack": "$(npm bin)/nodemon --watch client/src -e js,jsx,css,scss $(npm bin)/webpack",
+    "lint": "$(npm bin)/eslint --ignore-path .gitignore .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -41,6 +42,11 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.0",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-react": "^5.2.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "nodemon": "^1.9.2",
