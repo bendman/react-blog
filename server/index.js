@@ -1,11 +1,14 @@
-const express = require('express');
+require('babel-core/register');
+require('babel-polyfill');
+
+import express from 'express';
 const app = express();
 const PORT = 5050;
 
-const React = require('react');
-const { renderToString } = require('react-dom/server');
-const { RouterContext, match } = require('react-router');
-const appRoutes = require('../client/src/routes.jsx').default;
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { RouterContext, match } from 'react-router';
+import appRoutes from '../client/src/routes.jsx';
 
 
 app.use(express.static('client/srv'));
@@ -32,7 +35,8 @@ app.get('*', (req, res) => {
           </head>
           <body>
             <div id="content">${reactContent}</div>
-            <script src="./bundle.js" charset="utf-8"></script>
+            <script src="./common.bundle.js" charset="utf-8"></script>
+            <script src="./main.bundle.js" charset="utf-8"></script>
           </body>
         </html>
       `);

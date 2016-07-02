@@ -15,7 +15,7 @@ const Post = (props) => (
 Post.propTypes = {
   title: React.PropTypes.string,
   postedDate: React.PropTypes.string,
-  children: React.PropTypes.any,
+  children: React.PropTypes.element.isRequired,
 };
 
 export default Post;

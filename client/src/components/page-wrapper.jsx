@@ -13,7 +13,7 @@ const PageWrapper = (props) => (
   </div>
 );
 PageWrapper.propTypes = {
-  children: React.PropTypes.any,
+  children: React.PropTypes.element.isRequired,
 };
 
 export default PageWrapper;
