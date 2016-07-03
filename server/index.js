@@ -2,6 +2,7 @@ require('babel-core/register');
 require('babel-polyfill');
 
 import express from 'express';
+import morgan from 'morgan';
 const app = express();
 const PORT = 5050;
 
@@ -10,6 +11,7 @@ import { renderToString } from 'react-dom/server';
 import { RouterContext, match } from 'react-router';
 import appRoutes from '../client/src/routes.jsx';
 
+app.use(morgan('common'));
 
 app.use(express.static('client/srv'));
 

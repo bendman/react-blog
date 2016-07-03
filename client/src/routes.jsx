@@ -17,8 +17,10 @@ export default createRoutes({
   path: '/',
   component: PageWrapper,
   getIndexRoute(nextState, cb) {
-    const HomePage = require('./components/home-page').default;
-    cb(null, { component: HomePage });
+    require.ensure([], () => {
+      const HomePage = require('./components/home-page').default;
+      cb(null, { component: HomePage });
+    }, 'home-page');
   },
   childRoutes: Object.entries(postList).map(([path, route]) => (
     // Convert an object of path->definition to the full route format:

@@ -13,6 +13,9 @@ if (typeof require.include !== 'function') { require.include = function () {}; }
 // even though those parts are loaded synchronously, it might be necessary
 // to use webpack 2 and tree shaking:
 // http://moduscreate.com/code-splitting-for-react-router-with-es6-imports/
+// https://gist.github.com/sokra/27b24881210b56bbaff7#code-splitting-with-es6
+// Note: it would be nice to maintain custom async chunk names, as it helps
+// track views on the server (and helps with debugging)
 export default {
   'js-generators': {
     title: 'JS Generators',
@@ -20,7 +23,7 @@ export default {
       require.ensure([], () => {
         const TargetPost = require('../posts/generators').default;
         cb(null, TargetPost);
-      });
+      }, 'post.generators');
     },
   },
   'flexbox-layouts': {
@@ -29,7 +32,7 @@ export default {
       require.ensure([], () => {
         const TargetPost = require('../posts/flexbox').default;
         cb(null, TargetPost);
-      });
+      }, 'post.flexbox');
     },
   },
 };
