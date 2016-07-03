@@ -44,8 +44,10 @@ var config = {
   },
   plugins: [
     new ExtractTextPlugin('styles.bundle.css'),
-    new webpack.optimize.CommonsChunkPlugin('common', 'common.bundle.js'),
-    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      filename: 'common.bundle.js'
+    }),
   ],
   postcss: function postCSSPlugins() {
     return [
